@@ -120,6 +120,7 @@ public class LiveWallpaper extends WallpaperService {
 			Date date=new Date();
 			int hr=date.getHours()%12;
 			int mn=date.getMinutes()/5;
+			int sc=date.getSeconds()/5;
 
 			int g=64;
 			int r=32;
@@ -128,6 +129,7 @@ public class LiveWallpaper extends WallpaperService {
 
 			drawDigit(canvas,hr,x-g*2,y,r,g);
 			drawDigit(canvas,mn,x+g*2,y,r,g);
+			drawDigit(canvas,sc,x,y,r/4,g/4);
 		}
 
 		void drawDigit(Canvas canvas,int n,int x,int y,int r,int g) {
